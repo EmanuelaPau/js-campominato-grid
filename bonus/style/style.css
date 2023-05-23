@@ -43,16 +43,30 @@ div.grid {
 }
 
 div.grid .cell {
-    width: calc(100% / 10);
-    height: calc(100% / 10);
+    display: flex;
+    margin-0;
     border: 1px solid black;
     cursor: pointer;
+}
+
+div.grid .cell.hard {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+div.grid .cell.medium {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+
+div.grid .cell.easy {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 div.grid .cell p {
     text-align: center;
     font-size: 2rem;
-    line-height: 100px;
 }
 
 div.cell.selected {
