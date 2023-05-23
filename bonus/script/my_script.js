@@ -18,24 +18,32 @@ function createCellElement(tagName, className) {
 }
 
 const playButton = document.querySelector('.playbutton');
-console.log(`My button element is ${playButton}`);
 
 const difficultySelector = document.querySelector('select');
 
-difficultySelector.addEventListener('change', function () {
-    playButton.addEventListener('click', function () {
-        // reset 
-        myGrid.innerHTML = "";
+playButton.addEventListener('click', function () {
+    // reset 
+    myGrid.innerHTML = "";
 
-        if (difficultySelector.value == '1') {
-            alert('hard');
-        } else if (difficultySelector.value == '2') {
-            alert('medium');
-        } else {
-            alert('easy');
+    if (difficultySelector.value == '1') {
+        alert('hard');
+
+        myGrid.classList.add('grid-border');
+        for (i = 1; i <= 100; i++) {
+            const appendMyCell = createCellElement("div", "cell");
+            appendMyCell.innerHTML = '<p>' + i + '</p>'
+
+            appendMyCell.addEventListener('click', function () {
+                appendMyCell.classList.toggle('selected');
+            })
+            myGrid.appendChild(appendMyCell);
         }
-    })
 
+    } else if (difficultySelector.value == '2') {
+        alert('medium');
+    } else {
+        alert('easy');
+    }
 })
 
 // myGrid.classList.add('grid-border');
