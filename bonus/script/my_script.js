@@ -20,19 +20,31 @@ function createCellElement(tagName, className) {
 const playButton = document.querySelector('.playbutton');
 console.log(`My button element is ${playButton}`);
 
-playButton.addEventListener('click', function () {
-    // reset 
-    myGrid.innerHTML = "";
-    myGrid.classList.add('grid-border');
-    for (i = 1; i <= 100; i++) {
-        const appendMyCell = createCellElement("div", "cell");
-        appendMyCell.innerHTML = '<p>' + i + '</p>'
+const difficultySelector = document.querySelector('select');
 
-        appendMyCell.addEventListener('click', function () {
-            appendMyCell.classList.toggle('selected');
-        })
+difficultySelector.addEventListener('change', function () {
+    playButton.addEventListener('click', function () {
+        // reset 
+        myGrid.innerHTML = "";
 
-        myGrid.appendChild(appendMyCell);
-    }
+        if (difficultySelector.value == '1') {
+            alert('hard');
+        } else if (difficultySelector.value == '2') {
+            alert('medium');
+        } else {
+            alert('easy');
+        }
+    })
 
 })
+
+// myGrid.classList.add('grid-border');
+//         for (i = 1; i <= 100; i++) {
+//             const appendMyCell = createCellElement("div", "cell");
+//             appendMyCell.innerHTML = '<p>' + i + '</p>'
+
+//             appendMyCell.addEventListener('click', function () {
+//                 appendMyCell.classList.toggle('selected');
+//             })
+//             myGrid.appendChild(appendMyCell);
+//         }
