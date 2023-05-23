@@ -26,9 +26,17 @@ main {
     padding-top: 110px;
 }
 
-.grid-container {
+div.grid {
     margin: 0 auto;
     width: 1000px;
     height: 1000px;
     background-color: blueviolet;
+    border: 1px solid black;
+}
+
+div.grid.cell {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    cursor: pointer;
 }
