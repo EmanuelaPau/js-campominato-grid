@@ -3,3 +3,15 @@
 
 const myGrid = document.querySelector('div.grid');
 console.log(myGrid);
+
+/**
+ * createCellElement create 100 elements cell for a grid
+ * @returns 100 cell elements
+ */
+
+function createCellElement() {
+    for (i = 0; i > 100; i++) {
+        const myCell = document.createElement('div.cell');
+        return myCell;
+    }
+}
