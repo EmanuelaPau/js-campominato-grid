@@ -44,22 +44,23 @@ div.grid {
 
 div.grid .cell {
     display: flex;
-    margin-0;
+    align-items: center;
+    justify-content: center;
     border: 1px solid black;
     cursor: pointer;
 }
 
-div.grid .cell.hard {
+.hard {
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
 
-div.grid .cell.medium {
+.medium {
     width: calc(100% / 9);
     height: calc(100% / 9);
 }
 
-div.grid .cell.easy {
+.easy {
     width: calc(100% / 7);
     height: calc(100% / 7);
 }

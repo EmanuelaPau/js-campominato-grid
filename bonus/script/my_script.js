@@ -25,12 +25,13 @@ const difficultySelector = document.querySelector('select');
  * @param numCells the number of cells in the grid
  */
 
-function createGrid(numCells) {
+function createGrid(numCells, classToAdd) {
 
     myGrid.classList.add('grid-border');
     for (i = 1; i <= numCells; i++) {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p>' + i + '</p>'
+        appendMyCell.classList.add(classToAdd);
 
         appendMyCell.addEventListener('click', function () {
             appendMyCell.classList.toggle('selected');
@@ -43,15 +44,15 @@ playButton.addEventListener('click', function () {
     // reset 
     myGrid.innerHTML = "";
     if (difficultySelector.value == '1') {
-        alert('hard');
-        createGrid('100')
+        // alert('hard');
+        createGrid('100', 'hard')
 
     } else if (difficultySelector.value == '2') {
-        alert('medium');
-        createGrid('81')
+        // alert('medium');
+        createGrid('81', 'medium')
     } else {
-        alert('easy');
-        createGrid('49')
+        // alert('easy');
+        createGrid('49', 'easy')
     }
 })
 
