@@ -22,6 +22,14 @@ main {
     border: 1px solid grey;
 }
 
+.select-difficulty {
+    font-size: 1.4rem;
+    width: 140px;
+    border-radius: 10px;
+
+    /* border: 1px solid grey; */
+}
+
 div.grid {
     margin: 0 auto;
     width: 1000px;
