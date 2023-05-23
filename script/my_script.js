@@ -17,7 +17,6 @@ function createCellElement(tagName, className) {
     return myCell;
 }
 
-
 const playButton = document.querySelector('.playbutton');
 console.log(`My button element is ${playButton}`);
 
@@ -27,6 +26,7 @@ playButton.addEventListener('click', function () {
     for (i = 0; i < 100; i++) {
 
         const appendMyCell = createCellElement("div", "cell");
+        appendMyCell.innerHTML = '<p>' + i + '</p>'
         myGrid.appendChild(appendMyCell);
     }
 })
