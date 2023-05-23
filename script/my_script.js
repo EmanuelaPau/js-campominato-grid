@@ -11,18 +11,21 @@ console.log(`My grid element is ${myGrid}`);
 
 // Questo non funzionera' per il bonus
 function createCellElement(tagName, className) {
+
     const myCell = document.createElement(tagName);
     myCell.className += className;
     return myCell;
 }
 
+
 const playButton = document.querySelector('.playbutton');
 console.log(`My button element is ${playButton}`);
 
 playButton.addEventListener('click', function () {
-    alert('hello')
-
+    // reset 
+    myGrid.innerHTML = "";
     for (i = 0; i < 100; i++) {
+
         const appendMyCell = createCellElement("div", "cell");
         myGrid.appendChild(appendMyCell);
     }
