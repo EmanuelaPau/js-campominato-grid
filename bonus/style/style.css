@@ -10,6 +10,19 @@ main {
     padding: 110px;
 }
 
+footer {
+    padding: 1.8rem 2rem;
+    font-size: 1.85rem;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer p a {
+    color: #73439f;
+}
+
 .my_title {
     font-size: 3.5rem;
     font-weight: 700;
