@@ -50,7 +50,7 @@ playButton.addEventListener('click', function () {
     } else if (difficultySelector.value == '2') {
         // alert('medium');
         createGrid('81', 'medium')
-    } else {
+    } else if (difficultySelector.value == '3') {
         // alert('easy');
         createGrid('49', 'easy')
     }
