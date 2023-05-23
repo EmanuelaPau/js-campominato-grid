@@ -27,7 +27,9 @@ playButton.addEventListener('click', function () {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p>' + i + '</p>'
 
-
+        appendMyCell.addEventListener('click', function () {
+            appendMyCell.classList.toggle('selected');
+        })
 
         myGrid.appendChild(appendMyCell);
     }
