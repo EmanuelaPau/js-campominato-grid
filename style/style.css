@@ -37,6 +37,12 @@ div.grid .cell {
     cursor: pointer;
 }
 
+div.grid .cell p {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 100px;
+}
+
 div.cell.selected {
     background-color: lightskyblue;
 }
