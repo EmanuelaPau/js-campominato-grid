@@ -85,6 +85,7 @@ div.grid .cell {
 div.grid .cell p {
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 0;
 }
 
 div.cell.selected {
