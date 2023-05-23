@@ -9,9 +9,15 @@ console.log(myGrid);
  * @returns 100 cell elements
  */
 
+// Questo non funzionera' per il bonus
 function createCellElement() {
-    for (i = 0; i > 100; i++) {
-        const myCell = document.createElement('div.cell');
-        return myCell;
-    }
+    const myCell = document.createElement('div.cell');
+    return myCell;
 }
+
+const playButton = document.querySelector('button.playbutton');
+console.log(playButton);
+
+playButton.addEventListener('click', function () {
+    alert('hello')
+})
