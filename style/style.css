@@ -15,6 +15,10 @@ main {
     font-weight: 700;
 }
 
+img.boolean-logo {
+    width: 75px;
+}
+
 .playbutton {
     font-size: 1.4rem;
     width: 140px;
