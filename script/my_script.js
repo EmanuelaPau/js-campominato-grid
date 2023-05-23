@@ -23,6 +23,7 @@ console.log(`My button element is ${playButton}`);
 playButton.addEventListener('click', function () {
     // reset 
     myGrid.innerHTML = "";
+    myGrid.classList.add('grid-border');
     for (i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p>' + i + '</p>'
