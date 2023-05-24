@@ -24,15 +24,18 @@ playButton.addEventListener('click', function () {
     // reset 
     myGrid.innerHTML = "";
     myGrid.classList.add('grid-border');
+
+    let numberClicked;
+
     for (i = 1; i <= 100; i++) {
         const appendMyCell = createCellElement("div", "cell");
         appendMyCell.innerHTML = '<p>' + i + '</p>'
 
         appendMyCell.addEventListener('click', function () {
+            console.log(i);
             appendMyCell.classList.toggle('selected');
         })
 
         myGrid.appendChild(appendMyCell);
     }
-
 })
